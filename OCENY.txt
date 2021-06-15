@@ -1,6 +1,6 @@
 OCENA NA KTÓRĄ ASPIRUJEMY: 4.5
 
-Stopień spełnienia wymagań:
+Stopień spełnienia wymagań - Wszystkie wymagania dla oceny 4 oraz dodatkowo:
  - Wykorzystanie SpringBoot’a
  - Zaproponowanie schematu wersjonowania Restowego API
 
