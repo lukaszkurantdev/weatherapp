@@ -1,0 +1,734 @@
+{
+	"info": {
+		"_postman_id": "5daff152-20e7-49f9-945d-713c98ec650f",
+		"name": "weather_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"user2\",\n    \"password\": \"test123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/authenticate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"test123\",\n    \"newPassword\": \"test1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/change-password",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"change-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add redactor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/redactor_role",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"redactor_role"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all user list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/all_users_list",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"all_users_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all redactors list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/all_redactors_list",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"all_redactors_list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove redactor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/redactor_role",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"redactor_role"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pin",
+			"item": [
+				{
+					"name": "add pin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"nowy pin22222\",\n    \"description\": \"opis nowego pinu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pins",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add liked pin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pinId\": 2,\n    \"value\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/review",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set pins location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"longitude\": 0,\n    \"latitude\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/location",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"location"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pins list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/pins",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update pin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 1,\n    \"title\": \"nowa nazwa\",\n    \"description\": \"nowy opis\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pins",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove pin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/pins",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"pins"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove liked pin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pinId\": 2,\n    \"value\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/review",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"review"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Report",
+			"item": [
+				{
+					"name": "report pin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pinId\": 3,\n    \"reason\": \"Przyczyna zgłoszenia pinu\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reports",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accept report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"reportId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/accept_report",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"accept_report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reject report",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"reportId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reject_report",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reject_report"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "reports list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{token}}MiJ9.eyJzdWIiOiJ1c2VyMjAiLCJpYXQiOjE2MjM2ODEyMjIsImV4cCI6MTYyMzc2NzYyMn0.Nc8XdRAXo4irUsZObwO7-S-UqusPOb3AC73U18730yzjxdiu8bIKQQsw8e3zR99IR53iMRlmO_NBTGPhoa8hrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/reports",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reports"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8080"
+		},
+		{
+			"key": "token",
+			"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ1c2VyMiIsImV4cCI6MTYyMzc4NDE0NywiaWF0IjoxNjIzNzY2MTQ3fQ.CqvULtnj6TxyjHWdg-VV_xXKlOJEsTnp5ymhQp7AvY6DptKSE3K4RxiGpsetDxky6vMHFRDi8Bx3aWG6WpsbDw"
+		}
+	]
+}
