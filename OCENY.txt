@@ -1,0 +1,9 @@
+OCENA NA KTÓRĄ ASPIRUJEMY: 4.5
+
+Stopień spełnienia wymagań:
+ - Wykorzystanie SpringBoot’a
+ - Zaproponowanie schematu wersjonowania Restowego API
+
+Dodatkowe elementy:
+ - Wykorzystanie JWT jwt.io
+ - Bardziej zaawansowany front-end z wykorzystaniem biblioteki React implementujący mapy
