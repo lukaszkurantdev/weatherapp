@@ -1,0 +1,21 @@
+.map-container-location {
+  height: 60vh;
+  width: 100%;
+}
+
+.change-localization-form p {
+  /* display: flex;
+  flex-direction: column; */
+  text-align: left !important;
+}
+
+.change-localization-form h2 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.localization-button {
+  margin-top: 50px;
+  width: 200px;
+  float: right;
+}

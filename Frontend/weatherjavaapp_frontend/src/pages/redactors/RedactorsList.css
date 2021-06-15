@@ -1,0 +1,13 @@
+.list-container {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.add-redactor-button {
+    margin-top: 20px;
+}
+
+.empty-list-text {
+    text-align: center;
+    margin-top: 50px;
+}

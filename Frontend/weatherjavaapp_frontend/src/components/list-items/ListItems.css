@@ -1,0 +1,48 @@
+.list-item-container {
+    display: flex;
+    min-height: 50;
+    background-color:white;
+    padding: 10px 40px;
+    margin-top: 25px;
+    box-shadow: 10px 10px 97px 0 rgba(0, 0, 0, 0.12);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.text {
+    margin-left: 10px;
+}
+
+.content-container-list {
+    display: flex;
+    flex-direction: row;
+}
+
+.description-section {
+    width: 200px;
+    
+}
+
+.report-reason {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 20px;
+}
+
+.right-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.reason-text {
+    margin-top: -10px;
+}

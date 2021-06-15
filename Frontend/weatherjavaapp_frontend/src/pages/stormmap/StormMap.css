@@ -1,0 +1,184 @@
+.add-button {
+  height: 100px;
+  background-color: var(--background-secondary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.header-inside-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-inside-container h3 {
+  margin: 0 !important;
+}
+
+.buttons-container {
+  display: flex;
+}
+
+.round-button {
+  min-width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.round-button:hover {
+  opacity: 0.5;
+}
+
+.round-button-primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.round-button-primary p {
+  margin-left: 10px;
+  padding-right: 8px;
+  color: white;
+}
+
+.round-button-secondary {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.round-button-secondary p {
+  margin-left: 10px;
+  padding-right: 8px;
+}
+
+.round-button-secondary {
+  /* background-color: var(--background-secondary-color); */
+  margin-right: 10px;
+}
+
+.round-button-remove {
+  background-color: var(--danger-color);
+  color: white;
+}
+
+.big-loader-container {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-container {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-size: 13px !important;
+  z-index: 1;
+  padding-inline-start: 0px;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: white;
+  /* border: #264766 1px solid; */
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  align-self: center;
+  margin-top: 28px;
+}
+
+.pagination-page {
+  background-color: white;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none !important;
+  cursor: pointer;
+}
+
+.pagination-page:hover {
+  opacity: 0.6;
+}
+
+.pagination-page-active {
+  background-color: #264766;
+  color: white;
+}
+
+.pagination-navigation-button {
+  font-size: 15px;
+  background-color: white;
+  color: black;
+  height: 30px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none !important;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.pagination-navigation-button:hover {
+  opacity: 0.6;
+}
+
+.pagination-left-button {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination-right-button {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.refresh-button {
+  background-color: white;
+}
+
+.map-container,
+#mapid {
+  height: 70vh;
+  width: 100vw;
+}
+
+.popup-image {
+  height: 150px;
+  padding-top: 20px;
+}
+
+.popup-title {
+}
+
+.popup-description {
+  text-align: left;
+}
+.popup-credits {
+  font-size: 10px;
+  color: gray;
+  text-align: left;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}

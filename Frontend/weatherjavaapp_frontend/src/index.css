@@ -1,0 +1,24 @@
+/* Colors */
+
+html {
+  --primary-color: #264766;
+  --secondary-color: #264766;
+  --background-color: #f7f7f7;
+  --background-secondary-color: #ffffff;
+  --danger-color: rgb(209, 72, 54);
+  --pending-color: #a3a3a3;
+  --success-color: #4dc96e;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

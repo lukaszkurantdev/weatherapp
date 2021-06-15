@@ -1,0 +1,130 @@
+.App {
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-bar {
+  height: 60px;
+  /* width: 100%; */
+  background-color: var(--background-secondary-color);
+  -webkit-box-shadow: 10px 10px 97px 0px rgba(0, 0, 0, 0.12);
+  -moz-box-shadow: 10px 10px 97px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 10px 10px 97px 0px rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  z-index: 1000;
+}
+
+.app-main-logo h3 {
+  font-weight: 300;
+  font-size: 25px;
+  color: black;
+}
+
+.app-main-logo h3 span {
+  color: var(--primary-color);
+}
+
+.input {
+  background-color: var(--background-color);
+  border: transparent 1px solid;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.input:focus {
+  outline: 0;
+  border: var(--primary-color) 1px solid;
+}
+
+.input-danger {
+  border: var(--danger-color) 1px solid;
+}
+
+.label-danger {
+  color: var(--danger-color);
+  font-size: 10px;
+  text-align: left;
+}
+
+.input-reversed {
+  background-color: white;
+}
+
+.button {
+  background-color: var(--primary-color);
+  border: 0;
+  height: 40px;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+.main-default-container {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 20px;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+a:-webkit-any-link,
+a {
+  text-decoration: none;
+}
+
+footer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+footer p {
+  font-size: 10px;
+}
+
+.description-text {
+  font-size: 10px;
+  text-align: left;
+  color: gray;
+}
+
+.label-inside-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.label-inside-container label {
+  margin-bottom: 0;
+}
+
+.label-inside-container-with-bottom {
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+
+.simulation-flex-container .label-inside-container .checkbox-container {
+  margin-top: 0;
+}

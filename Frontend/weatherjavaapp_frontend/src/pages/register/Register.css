@@ -1,0 +1,103 @@
+body,
+.root {
+  height: 100vh;
+}
+
+.main-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-center-container {
+  display: flex;
+  width: 400px;
+  /* justify-content: center; */
+
+  background-color: var(--background-secondary-color);
+  flex-direction: column;
+  -webkit-box-shadow: 10px 10px 78px 0px rgba(0, 0, 0, 0.26);
+  -moz-box-shadow: 10px 10px 78px 0px rgba(0, 0, 0, 0.26);
+  box-shadow: 10px 10px 78px 0px rgba(0, 0, 0, 0.26);
+  border-radius: 20px;
+}
+
+.logo-center-container {
+  height: 150px;
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  background-image: url('../../assets/images/logindesign.jpg');
+  filter: brightness(50%);
+  position: fixed;
+}
+
+.logo-main-container {
+  height: 150px;
+  width: 100%;
+}
+
+.form-center-container form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.form-center-container form .button {
+  margin: 30px 20px 20px 20px;
+  cursor: pointer;
+}
+
+label:first-of-type {
+  margin-top: 0;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+p {
+  text-align: center;
+  font-size: 14px;
+}
+
+p span {
+  color: var(--primary-color);
+}
+
+p span:hover {
+  opacity: 0.5;
+}
+
+.title {
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+.app-header {
+  text-align: center;
+  color: white;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 35px;
+}
+
+.app-header h3 {
+  font-weight: 300;
+  font-size: 25px;
+}
+
+.app-header h3 span {
+  color: #b9d5f0;
+}
